@@ -3,13 +3,13 @@ global _ft_strcmp
 section .text
 _ft_strcmp:
 .loop:
-	mov bl, byte [rdi]
-	cmp bl, byte [rsi]
-	jne .return	
 	cmp byte [rdi], 0
 	je .return
 	cmp byte [rsi], 0
 	je .return
+	mov bl, byte [rdi]
+	cmp bl, byte [rsi]
+	jne .return	
 	inc rdi
 	inc rsi
 	jmp .loop
