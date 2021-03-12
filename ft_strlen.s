@@ -2,8 +2,8 @@ global _ft_strlen
 
 section .text
 _ft_strlen:
-	mov rax , 0
-.loop: 
+	mov rax, 0
+.loop:
 	cmp byte [rdi], 0
 	je .return
 	inc rax
@@ -11,4 +11,3 @@ _ft_strlen:
 	jmp .loop
 .return:
 	ret
-
