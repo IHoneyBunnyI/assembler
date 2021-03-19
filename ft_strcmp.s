@@ -4,12 +4,10 @@ section .text
 _ft_strcmp:
 .loop:
 	cmp byte [rdi], 0
-	je .return
-	cmp byte [rsi], 0
-	je .return
+	jne .return
 	mov bl, byte [rdi]
 	cmp bl, byte [rsi]
-	jne .return	
+	je .return
 	inc rdi
 	inc rsi
 	jmp .loop
@@ -17,5 +15,4 @@ _ft_strcmp:
 	sub bl, byte [rsi]
 	movsx rax, bl
 	ret
-
 	; из rdi - rsi
