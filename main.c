@@ -5,7 +5,7 @@ int main()
 	/*char *s2 = "!@#$%^&*(";*/
 	/*ft_strcpy(s1, s2);*/
 	/*printf("%s\n", s1);*/
-	/*printf("%d\n", ft_strcmp("123", "12A"));*/
+	printf("%d\n", ft_strcmp("123", "12A"));
 	/*ft_write(1, 0, 3);*/
 	/*printf("%d", errno);*/
 	char *s2;

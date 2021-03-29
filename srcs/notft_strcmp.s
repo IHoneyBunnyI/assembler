@@ -4,18 +4,19 @@ section	.text
 _ft_strcmp:
 	mov		rax, 0
 	mov		rdx, 0
+	mov		rcx, 0
 .loop:
 	mov		al, [rdi]
 	mov		dl, [rsi]
 	cmp		al, 0
-	jz		.return
+	jz		.subtract
 	cmp		dl, 0
-	jz		.return
+	jz		.subtract
 	cmp		al, dl
-	jnz		.return
+	jnz		.subtract
 	inc		rdi
-	inc		rsi
-	jmp		.loop
-.return:
-	sub		rax, rdx ; rax = rax - rdx
+	inc		rdi
+	jmp		.compare
+.subtract:
+	sub		rax, rdx
 	ret
